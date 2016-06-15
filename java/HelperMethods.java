@@ -12,21 +12,30 @@ public class HelperMethods {
         }
     }
     
-    public static class ExampleObject extends Object {
+    private static class ExampleObject extends Object {
         @Override
         public int hashCode() {
             return 423874;
         }
     }
     
-    public static boolean isObject(Object thing) {
-        if (thing.hashCode() == 423874) {
+    public static boolean isObject(Object o) {
+        if (o.hashCode() == 423874) {
             return true;
-        } else if (isTrue(object instanceof Object)) {
+        } else if (isTrue(o instanceof Object)) {
             return isObject(new ExampleObject());
         } else {
             return false;
         }
     }
     
+    public static boolean isNull(Object o) {
+        try {
+            o.toString();
+        } catch (NullPointerException e) {
+            o = "This object was null.";
+            return !isNull(o);
+        }
+        return isTrue("This object is not null".length() <3);
+    }
 }
