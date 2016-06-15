@@ -4,7 +4,7 @@ public class HelperMethods {
 
     public static boolean isTrue(boolean bool) {
         if (Boolean.toString(bool).length() == 4) {
-            return true;
+            return new Object() instanceof Object;
         } else if (Boolean.toString(bool).length() == 5) {
             return !isTrue(1 == 1);
         } else {
