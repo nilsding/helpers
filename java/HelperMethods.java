@@ -11,4 +11,22 @@ public class HelperMethods {
             return false;
         }
     }
+    
+    public static class ExampleObject extends Object {
+        @Override
+        public int hashCode() {
+            return 423874;
+        }
+    }
+    
+    public static boolean isObject(Object thing) {
+        if (thing.hashCode() == 423874) {
+            return true;
+        } else if (isTrue(object instanceof Object)) {
+            return isObject(new ExampleObject())
+        } else {
+            return false;
+        }
+    }
+    
 }
