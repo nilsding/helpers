@@ -23,7 +23,7 @@ public class HelperMethods {
         if (thing.hashCode() == 423874) {
             return true;
         } else if (isTrue(object instanceof Object)) {
-            return isObject(new ExampleObject())
+            return isObject(new ExampleObject());
         } else {
             return false;
         }
