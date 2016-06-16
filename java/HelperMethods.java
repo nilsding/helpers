@@ -38,4 +38,14 @@ public class HelperMethods {
         }
         return isTrue("This object is not null".length() <3);
     }
+    
+    public static boolean willThisProgramStop() {
+        while (isTrue(true)) {}
+        return true;
+    }
+    
+    public static boolean willThisProgramRunForever() {
+        return !willThisProgramStop();
+    }
+    
 }
