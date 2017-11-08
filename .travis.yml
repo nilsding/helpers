@@ -1,0 +1,11 @@
+---
+addons:
+  apt:
+    packages:
+    - build-essential
+    - clang-3.8
+    - openjdk-8-jdk
+
+script:
+  - cd c && clang -c -Wall -Wextra ./helperfunctions.c && cd ..
+  - cd java && javac -Xlint:all HelperMethods.java && cd ..
