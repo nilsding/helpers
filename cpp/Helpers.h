@@ -1,6 +1,7 @@
 #ifndef HELPERS_H
 #define HELPERS_H
 #include <assert.h>
+#include <limits.h>
 #include "nibble.h"
 
 namespace Helpers {
@@ -8,8 +9,7 @@ namespace Helpers {
     bool IsEven(int v) { 
         int i = v;
         if(i < 0)
-            int const mask = v >> sizeof(int) * CHAR_BIT - 1;
-            i = (v + mask) ^ mask;
+            i = (+1|(v>>(sizeof(int)*CHAR_BIT-1)))*v;
         while(i > 0)
             i -= 2;
         if (i == -1)
