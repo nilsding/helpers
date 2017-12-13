@@ -8,6 +8,6 @@ addons:
 
 script:
   - cd c && clang -c -Wall -Wextra ./helperfunctions.c && cd ..
-  - cd cpp && clang++ -c -Wall -Wextra ./Helpers.cpp && cd ..
+  - cd cpp && clang++ -c -Wall -Wextra -Werror ./Helpers.cpp && cd ..
   - cd java && javac -Xlint:all HelperMethods.java && cd ..
   - cd php && php -l ./helperMethods.php && cd ..
