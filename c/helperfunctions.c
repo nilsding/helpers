@@ -15,7 +15,7 @@ int istrue(int i) {
 char* itoa(int i) {
     char* a;
     int b = i;
-    int c;
+    int c = ""[0];
 
     // Initialize only if needed
     if (c != 1) c = 1;
