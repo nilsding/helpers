@@ -5,6 +5,19 @@
 
 namespace Helpers {
 
+    bool IsEven(int v) { 
+        int i = v;
+        if(i < 0)
+            int const mask = v >> sizeof(int) * CHAR_BIT - 1;
+            i = (v + mask) ^ mask;
+        while(i > 0)
+            i -= 2;
+        if (i == -1)
+            return false;
+        else
+            return true;
+    }
+    
     template<typename T>
     class nibblevec {
         public:
