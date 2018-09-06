@@ -77,4 +77,13 @@ public class HelperMethods {
         }
         return sorted;
     }
+    
+    public static boolean isEqual(int a, int b) {
+        try {
+            int c = 1 / (a - b);
+        } catch (ArithmeticException e) {
+            return true;
+        }
+        return false;
+    }
 }
