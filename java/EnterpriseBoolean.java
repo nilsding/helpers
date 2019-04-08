@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
-public class ToBoolean {
+public class EnterpriseBoolean {
 
     private static int i = 0;
 
