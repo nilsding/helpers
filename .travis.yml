@@ -9,5 +9,5 @@ addons:
 script:
   - cd c && clang -c -Wall -Wextra -Werror ./helperfunctions.c && cd ..
   - cd cpp && clang++ -c -Wall -Wextra -Werror ./Helpers.cpp && cd ..
-  - cd java && javac -Xlint:all HelperMethods.java && cd ..
+  - cd java && javac -Xlint:all HelperMethods.java && javac -Xlint:all EnterpriseBoolean.java && cd ..
   - cd php && php -l ./helperMethods.php && cd ..
